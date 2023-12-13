@@ -47,13 +47,13 @@ body{
     font-size: .7em;
 }
 .green{
-    background-color: green;
+    background-color: #d7c7be;
 }
 .red{
-    background-color: red;
+    background-color: #88c3b5;
 }
 .orange{
-    background-color: orange;
+    background-color: #6d6168;
 }
 .btnp:hover, .btnp:focus, .btnp:active{
     background-color: rgb(246,247,247)!important;
@@ -177,7 +177,7 @@ body{
 }
 
 .cbtn:hover, .cbtn:focus, .cbtn:active{
-    color: #dc3545!important;
+    color: #88c3b5!important;
 }
 
 .pbtn:hover, .pbtn:focus, .pbtn:active{

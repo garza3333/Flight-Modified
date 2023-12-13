@@ -20,7 +20,7 @@
 .header-before{
     font-size: 1.6em;
     text-align: center;
-    color: orange;
+    color: #6d6168;
 }
 
 .below-header{
@@ -56,7 +56,7 @@
     margin: auto;
 }
 .header-after{
-    color: green;
+    color: #d7c7be;
     font-size: 1.5em;
     font-weight: 500;
     text-align: center;
@@ -91,11 +91,11 @@
     animation-name: enlarge;
     animation-duration: .5s;
     animation-fill-mode: forwards;
-    color: rgb(215, 0, 0);
+    color: rgb(136, 195, 181);
     margin: auto;
 }
 .star{
-    color: rgb(200, 0, 0);
+    color: rgb(136, 195, 181);
 }
 
 
