@@ -30,7 +30,6 @@ for r in tr:
     df = df.append(row, ignore_index=True)
 
 
-# Adding top 30 airports in india
 page = request.urlopen("https://www.worlddata.info/asia/india/airports.php")
 soup = bs(page, features="html.parser")
 

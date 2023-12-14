@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block head %}
-    <title>Payment | Flight</title>
+    <title>Pago | Vuelo</title>
     <link rel="stylesheet" href="{% static 'css/payment_style.css' %}">
 {% endblock %}
 
@@ -13,7 +13,7 @@
             <div class="payment-box">
                 <div class="payment-box-head-div">
                     <div class="payment-box-head">
-                        <h5>Payment Details</h5>
+                        <h5>Detalles de pago</h5>
                         <div class="display-td">
                             <img class="card-img" src="{% static 'img/card.png' %}">
                         </div>
@@ -22,22 +22,22 @@
                 <div class="payment-details-input-box">
                     <form action="{% url 'payment' %}" method="POST">
                         {% csrf_token %}
-                        <!--<input type="hidden" name="payment_amount" value="{{fare}}">-->
+                    
                         <input type="hidden" name="ticket" value="{{ticket}}" required>
                         {% if ticket2 %}
                             <input type="hidden" name="ticket2" value="{{ticket2}}" required>
                         {% endif %}
                         <div class="row payment-amount-div">
                             <div class="form-group">
-                                <label for="payment_amount">PAYMENT AMOUNT</label>
+                                <label for="payment_amount">Monto de Pago</label>
                                 <input type="text" class="form-control" id="payment_amount" name="fare" value="$ {{fare}}" disabled required>
                             </div>
                         </div>
                         <div class="row card-no-div">
                             <div class="form-group">
-                                <label for="card_number">CARD NUMBER</label>
+                                <label for="card_number">NÚMERO DE TARJETA</label>
                                 <div class="input-group">
-                                    <input type="tel" pattern="[0-9]*" class="form-control" id="card_number" name="cardNumber" autocomplete="off" maxlength="19" placeholder="Enter card number" required> <!--onkeypress="return isNumericValue(event);"-->
+                                    <input type="tel" pattern="[0-9]*" class="form-control" id="card_number" name="cardNumber" autocomplete="off" maxlength="19" placeholder="Número de tarjeta" required> 
                                     <div class="input-group-append">
                                         <span class="input-group-text" id="basic-addon2">
                                         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-credit-card" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -52,19 +52,19 @@
                         </div>
                         <div class="row card-holder-div">
                             <div class="form-group">
-                                <label for="card_holder_name">CARD HOLDER'S NAME</label>
-                                <input type="text" name="cardHolderName" class="form-control" id="cardHolderName" placeholder="Enter name" required>
+                                <label for="card_holder_name">NOMBRE DEL ENCARGADO</label>
+                                <input type="text" name="cardHolderName" class="form-control" id="cardHolderName" placeholder="Ingresa el nombre del encargado" required>
                                 <!--<small id="nameHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
                             </div>
                         </div>
                         <div class="row expiry-cvv">
                             <div class="row">
                                 <div class="left-col">
-                                    <label for="expiry_month">EXPIRY DATE</label>
+                                    <label for="expiry_month">Vencimiento</label>
                                     <div class="expiry-input-div">
                                         <div class="month-div">
                                             <select name="expMonth" id="expiry_month" class="form-control" required>
-                                                <option value="">Month</option>
+                                                <option value="">Mes</option>
                                                 <option value="01">01</option>
                                                 <option value="02">02</option>
                                                 <option value="03">03</option>
@@ -81,7 +81,7 @@
                                         </div>
                                         <div class="yeae-div">
                                             <select name="expYear" id="expiry_year" class="form-control" required>
-                                                <option value="">Year</option>
+                                                <option value="">Año</option>
                                                 <option value="2020">2020</option>
                                                 <option value="2021">2021</option>
                                                 <option value="2022">2022</option>
@@ -126,14 +126,14 @@
                                 <div class="right-col">
                                     <div class="form-group">
                                         <label for="cvv_number">CVV CODE</label>
-                                        <input type="password" pattern="[0-9]*" class="form-control" placeholder="CVV" id="cvv_number" name="cvv" maxlength="3">    <!--onkeypress="return isNumericValue(event);"-->
-                                        <!--<small id="nameHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+                                        <input type="password" pattern="[0-9]*" class="form-control" placeholder="CVV" id="cvv_number" name="cvv" maxlength="3">    
+                                       
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="payment-btn">
-                            <button class="btn btn-primary btn-danger">Make payment</button>
+                            <button class="btn btn-primary btn-primary">Realizar Pago</button>
                         </div>
                     </form>
                 </div>
